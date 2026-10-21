@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSS OFFICIAL - মহা সত্যের সন্ধানে | অফিশিয়াল ইসলামিক পোর্টাল</title>
+
+    <!-- Website Favicon / Icon -->
+    <link rel="icon" type="image/png" href="https://www.image2url.com/r2/default/images/1792503066606-dfac45db-bb4d-479d-87e9-a595b9ccf72c.png">
+
+    <!-- Google Fonts: Hind Siliguri, Amiri, Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Canvas Confetti for Celebration -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("S94aFG73HwOss_7_z"); 
+        })();
+    </script>
+
+    <style>
+        :root {
+            --bg-dark: #03140a;
+            --primary-green: #072a15;
+            --emerald-medium: #0f4024;
+            --emerald-light: #166536;
+            --gold-primary: #d4af37;
+            --gold-light: #fbf5b7;
+            --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 40%, #b38728 75%, #fbf5b7 100%);
+            --card-bg: #061e10;
+            --card-border: rgba(212, 175, 55, 0.25);
+            --text-main: #f1f7f3;
+            --text-muted: #9ab3a1;
+            --shadow-elevated: 0 18px 45px rgba(2, 16, 8, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Hind Siliguri', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: all 0.25s ease;
+        }
+
+        body {
+            background-color: #031208;
+            color: var(--text-main);
+            padding: 25px 12px;
+            background-image: 
+                radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px),
+                radial-gradient(rgba(16, 185, 129, 0.05) 1px, #031208 1px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 940px;
+            margin: 0 auto;
+        }
+
+        .font-num {
+            font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
+        }
+
+        .font-amiri {
+            font-family: 'Amiri', serif;
+        }
+
+        /* প্রিমিয়াম অফিশিয়াল হেডার */
+        header {
+            text-align: center;
+            margin-bottom: 24px;
+            background: linear-gradient(145deg, #010a04 0%, #062613 50%, #0d381c 100%);
+            color: white;
+            padding: 35px 20px 25px;
+            border-radius: 28px;
+            box-shadow: var(--shadow-elevated);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ";
+            font-family: 'Amiri', serif;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 26px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.95;
+            letter-spacing: 1px;
+            width: 100%;
+        }
+
+        .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--gold-light);
+            font-weight: 600;
+            margin-top: 32px;
+        }
+
+        .brand-logo {
+            font-size: 38px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 6px;
+            margin-bottom: 2px;
+            text-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+        }
+
+        .brand-subtitle {
+            font-size: 19px;
+            color: var(--gold-light);
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .header-tagline {
+            font-size: 14px;
+            color: #b9d7c3;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .header-meta-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+
+        .live-clock-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: var(--gold-light);
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        /* কার্ড স্টাইল */
+        .card {
+            background: linear-gradient(150deg, #061e10 0%, #03140a 100%);
+            padding: 26px;
+            border-radius: 24px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+            margin-bottom: 24px;
+            border: 1px solid var(--card-border);
+            position: relative;
+        }
+
+        .card-title {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card-title-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-title-left i {
+            color: #d4af37;
+            font-size: 22px;
+        }
+
+        /* নেক্সট ওয়াক্ত কাউন্টডাউন ও হিজরি ব্যানার */
+        .status-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .status-box {
+            background: rgba(7, 42, 21, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 14px 16px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .status-box i {
+            font-size: 22px;
+            color: #d4af37;
+        }
+
+        .status-box-content h5 {
+            font-size: 12px;
+            color: #9ab3a1;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .status-box-content p {
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        /* জেলা সেলেক্টর */
+        .select-wrapper {
+            position: relative;
+            margin-bottom: 18px;
+        }
+
+        .select-district {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 15px;
+            border-radius: 14px;
+            border: 1.5px solid rgba(212, 175, 55, 0.3);
+            outline: none;
+            background: #020f06;
+            color: #ffffff;
+            font-weight: 600;
+            cursor: pointer;
+            appearance: none;
+        }
+
+        .select-wrapper::after {
+            content: "\f107";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #d4af37;
+            pointer-events: none;
+        }
+
+        .select-district:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+        }
+
+        /* সময়ের গ্রিড */
+        .prayer-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .time-box {
+            background: rgba(2, 18, 9, 0.7);
+            padding: 16px 8px;
+            border-radius: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .time-box:hover {
+            transform: translateY(-3px);
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .time-box h4 {
+            color: #9ab3a1;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .time-box h4 i {
+            color: #d4af37;
+            font-size: 13px;
+        }
+
+        .time-box p {
+            font-size: 18px;
+            font-weight: 800;
+            color: #fbf5b7;
+        }
+
+        .time-box span {
+            font-size: 11px;
+            color: #9ab3a1;
+            display: block;
+            margin-top: 2px;
+        }
+
+        /* সাহরি ও ইফতার বার */
+        .ramadan-bar {
+            margin-top: 16px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 14px;
+            padding: 12px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .ramadan-bar strong {
+            color: #d4af37;
+        }
+
+        /* আয়াত ও হাদিস সেকশন */
+        .inspiration-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .inspiration-card {
+            background: linear-gradient(145deg, #052110 0%, #021108 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .inspiration-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            font-size: 12px;
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        .copy-btn {
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #fbf5b7;
+            padding: 3px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 11px;
+        }
+
+        .copy-btn:hover {
+            background: #d4af37;
+            color: #000;
+        }
+
+        /* ফর্ম অংশ */
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #d7e8dd;
+        }
+
+        .input-control {
+            width: 100%;
+            padding: 13px 18px;
+            border: 1.5px solid rgba(212, 175, 55, 0.25);
+            border-radius: 12px;
+            font-size: 14px;
+            outline: none;
+            background: #020f06;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .input-control:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+        }
+
+        textarea.input-control {
+            resize: vertical;
+        }
+
+        .category-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+
+        .cat-tag {
+            background: rgba(7, 42, 21, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            color: #cde2d3;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .cat-tag:hover {
+            background: #d4af37;
+            color: #03140a;
+            font-weight: 600;
+        }
+
+        /* সাবমিট বাটন ও প্লেন অ্যানিমেশন */
+        .submit-btn {
+            background: linear-gradient(135deg, #0b3d1f 0%, #176536 100%);
+            color: #ffffff;
+            padding: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            border-radius: 14px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            position: relative;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #0e4f28 0%, #1c7a42 100%);
+            transform: translateY(-2px);
+        }
+
+        .plane-container {
+            display: inline-block;
+            position: relative;
+            width: 22px;
+            height: 22px;
+        }
+
+        .plane-icon {
+            font-size: 18px;
+            position: absolute;
+            top: 0; 
+            left: 0;
+            color: #fbf5b7;
+        }
+
+        .submit-btn.sending .plane-icon {
+            animation: flyPlane 1.2s forwards cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes flyPlane {
+            0% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(140px, -90px) rotate(-35deg) scale(0.6);
+                opacity: 0;
+            }
+            51% {
+                transform: translate(-140px, 90px) rotate(-35deg) scale(0.6);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        #status-msg {
+            margin-top: 18px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            display: none;
+        }
+
+        /* তাসবীহ সেকশন */
+        .tasbih-box {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .tasbih-counter-btn {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #093b1d, #021207);
+            border: 4px solid #d4af37;
+            color: #fbf5b7;
+            font-size: 46px;
+            font-weight: 800;
+            margin: 15px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 2px 10px rgba(212,175,55,0.2);
+            user-select: none;
+        }
+
+        .tasbih-counter-btn:active {
+            transform: scale(0.96);
+        }
+
+        .tasbih-counter-btn span {
+            font-size: 12px;
+            color: #9ab3a1;
+            font-weight: 600;
+        }
+
+        /* জাকাত সেকশন */
+        .zakat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        /* ফুটার */
+        footer {
+            text-align: center;
+            margin-top: 35px;
+            padding: 25px 20px;
+            color: #8da493;
+            font-size: 13px;
+            font-weight: 500;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .prayer-grid { grid-template-columns: repeat(3, 1fr); }
+            .status-grid { grid-template-columns: 1fr; }
+            .inspiration-grid { grid-template-columns: 1fr; }
+            .zakat-grid { grid-template-columns: 1fr; }
+            .brand-logo { font-size: 30px; }
+            .brand-subtitle { font-size: 16px; }
+        }
+
+        @media (max-width: 480px) {
+            .prayer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+<script src="/_aistudio-iframe.js?v=6634132a"></script></head>
+<body>
+
+<div class="container">
+    <!-- প্রিমিয়াম হেডার -->
+    <header>
+        <div class="brand-badge">
+            <i class="fa-solid fa-shield-halved"></i> অফিশিয়াল ইসলামিক পোর্টাল
+        </div>
+        <div class="brand-logo">MSS OFFICIAL</div>
+        <div class="brand-subtitle">(মহা সত্যের সন্ধানে)</div>
+        <div class="header-tagline">
+            নির্ভরযোগ্য শরয়ী তথ্য, কুরআন-সুন্নাহর সঠিক দিকনির্দেশনা ও প্রতিদিনের নামাজের সঠিক সময়সূচি
+        </div>
+        <div class="header-meta-bar">
+            <div class="live-clock-badge">
+                <i class="fa-regular fa-clock"></i> <span id="liveClock">সময় লোড হচ্ছে...</span>
+            </div>
+            <div class="live-clock-badge">
+                <i class="fa-regular fa-calendar-check"></i> <span id="liveDate">তারিখ লোড হচ্ছে...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- নির্বাচিত আয়াত ও হাদিস -->
+    <div class="inspiration-grid">
+        <div class="inspiration-card">
+            <div class="inspiration-header">
+                <span><i class="fa-solid fa-book-quran"></i> আজকের নির্বাচিত আয়াত</span>
+                <button class="copy-btn" onclick="copyAyah()"><i class="fa-regular fa-copy"></i> কপি</button>
+            </div>
+            <p class="font-amiri" style="font-size: 20px; color: #fbf5b7; margin-bottom: 8px;">إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَّوْقُوتًا</p>
+            <p id="ayahBengali" style="font-size: 14px; color: #e1ede4;">"নিশ্চয়ই সালাত বিশ্বাসীদের জন্য নির্ধারিত সময়ে ফরজ করা হয়েছে।"</p>
+            <span style="font-size: 11px; color: #d4af37; margin-top: 6px; display: inline-block;">— সূরা আন-নিসা, আয়াত: ১০৩</span>
+        </div>
+
+        <div class="inspiration-card">
+            <div class="inspiration-header">
+                <span><i class="fa-solid fa-quote-left"></i> আজকের নির্বাচিত হাদিস</span>
+                <button class="copy-btn" onclick="copyHadith()"><i class="fa-regular fa-copy"></i> কপি</button>
+            </div>
+            <p style="font-size: 12px; color: #d4af37; margin-bottom: 4px;">হযরত আবু হুরায়রা (রা.) হতে বর্ণিত:</p>
+            <p id="hadithBengali" style="font-size: 14px; color: #e1ede4;">"বান্দা যখন সিজদা অবস্থায় থাকে তখন সে তার রবের সবচেয়ে নিকটবর্তী হয়। অতএব তোমরা এ অবস্থায় অধিক দুআ করো।"</p>
+            <span style="font-size: 11px; color: #d4af37; margin-top: 6px; display: inline-block;">— সহীহ মুসলিম: ৪৮২</span>
+        </div>
+    </div>
+
+    <!-- নামাজের সময়সূচি সেকশন -->
+    <div class="card">
+        <div class="card-title">
+            <div class="card-title-left">
+                <i class="fa-solid fa-kaaba"></i>
+                <span>আজকের নামাজের সময়সূচি (বাংলাদেশ)</span>
+            </div>
+            <button onclick="getPrayerTimes()" class="copy-btn" style="padding: 6px 12px; font-size: 12px;">
+                <i class="fa-solid fa-arrows-rotate"></i> রিফ্রেশ
+            </button>
+        </div>
+
+        <!-- স্ট্যাটাস গ্রিড (হিজরি ও নেক্সট ওয়াক্ত) -->
+        <div class="status-grid">
+            <div class="status-box">
+                <i class="fa-regular fa-calendar-days"></i>
+                <div class="status-box-content">
+                    <h5>হিজরি তারিখ (আরবি)</h5>
+                    <p id="hijriText">তথ্য লোড হচ্ছে...</p>
+                </div>
+            </div>
+            <div class="status-box">
+                <i class="fa-solid fa-bell"></i>
+                <div class="status-box-content">
+                    <h5>পরবর্তী ওয়াক্ত ও বাকি সময়</h5>
+                    <p id="nextPrayerText">হিসাব করা হচ্ছে...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- জেলা নির্বাচন -->
+        <div class="select-wrapper">
+            <select id="districtSelect" class="select-district" onchange="getPrayerTimes()">
+                <option value="Jashore" selected>যশোর (Jashore)</option>
+                <option value="Dhaka">ঢাকা (Dhaka)</option>
+                <option value="Chittagong">চট্টগ্রাম (Chittagong)</option>
+                <option value="Khulna">খুলনা (Khulna)</option>
+                <option value="Rajshahi">রাজশাহী (Rajshahi)</option>
+                <option value="Sylhet">সিলেট (Sylhet)</option>
+                <option value="Barisal">বরিশাল (Barisal)</option>
+                <option value="Rangpur">রংপুর (Rangpur)</option>
+                <option value="Mymensingh">ময়মনসিংহ (Mymensingh)</option>
+                <option value="Comilla">কুমিল্লা (Comilla)</option>
+                <option value="Bogra">বগুড়া (Bogra)</option>
+                <option value="Kushtia">কুষ্টিয়া (Kushtia)</option>
+                <option value="Faridpur">ফরিদপুর (Faridpur)</option>
+                <option value="Gazipur">গাজীপুর (Gazipur)</option>
+                <option value="Narayanganj">নারায়ণগঞ্জ (Narayanganj)</option>
+                <option value="Tangail">টাঙ্গাইল (Tangail)</option>
+                <option value="Dinajpur">দিনাজপুর (Dinajpur)</option>
+                <option value="Pabna">পাবনা (Pabna)</option>
+                <option value="Cox's Bazar">কক্সবাজার (Cox's Bazar)</option>
+                <option value="Noakhali">নোয়াখালী (Noakhali)</option>
+                <option value="Feni">ফেনী (Feni)</option>
+                <option value="Brahmanbaria">ব্রাহ্মণবাড়িয়া (Brahmanbaria)</option>
+                <option value="Chandpur">চাঁদপুর (Chandpur)</option>
+                <option value="Bagerhat">বাগেরহাট (Bagerhat)</option>
+                <option value="Satkhira">সাতক্ষীরা (Satkhira)</option>
+                <option value="Jhenaidah">ঝিনাইদহ (Jhenaidah)</option>
+                <option value="Magura">মাগুরা (Magura)</option>
+                <option value="Narail">নড়াইল (Narail)</option>
+                <option value="Chuadanga">চুয়াডাঙ্গা (Chuadanga)</option>
+                <option value="Meherpur">মেহেরপুর (Meherpur)</option>
+            </select>
+        </div>
+
+        <div class="prayer-grid">
+            <div class="time-box">
+                <h4><i class="fa-solid fa-cloud-sun"></i> ফজর</h4>
+                <p id="fajr">--:--</p>
+                <span>ভোরের আলো</span>
+            </div>
+            <div class="time-box">
+                <h4><i class="fa-solid fa-sun"></i> সূর্যোদয়</h4>
+                <p id="sunrise">--:--</p>
+                <span>ইশরাকের সূচনা</span>
+            </div>
+            <div class="time-box">
+                <h4><i class="fa-solid fa-sun"></i> যোহর</h4>
+                <p id="dhuhr">--:--</p>
+                <span>মধ্যাহ্নের সালাত</span>
+            </div>
+            <div class="time-box">
+                <h4><i class="fa-solid fa-cloud-sun"></i> আসর</h4>
+                <p id="asr">--:--</p>
+                <span>হানাফী মাযহাব</span>
+            </div>
+            <div class="time-box">
+                <h4><i class="fa-solid fa-mountain-sun"></i> মাগরিব</h4>
+                <p id="maghrib">--:--</p>
+                <span>সূর্যাস্ত / ইফতার</span>
+            </div>
+            <div class="time-box">
+                <h4><i class="fa-solid fa-moon"></i> এশা</h4>
+                <p id="isha">--:--</p>
+                <span>রাতের সালাত ও বিতর</span>
+            </div>
+        </div>
+
+        <div class="ramadan-bar">
+            <div><i class="fa-solid fa-moon text-warning"></i> সাহরি শেষ সময়: <strong id="sehriEnd">--:--</strong> (সতর্কতামূলক)</div>
+            <div><i class="fa-solid fa-utensils text-success"></i> ইফতার সময়: <strong id="iftarStart">--:--</strong></div>
+        </div>
+    </div>
+
+    <!-- প্রশ্ন করার ফর্ম -->
+    <div class="card">
+        <div class="card-title">
+            <div class="card-title-left">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <span>MSS OFFICIAL - শরয়ী মাসআলা ও প্রশ্ন প্রেরণ করুন</span>
+            </div>
+            <span style="font-size: 11px; background: rgba(212,175,55,0.15); color: #fbf5b7; padding: 3px 10px; border-radius: 20px; border: 1px solid rgba(212,175,55,0.3);">
+                <i class="fa-solid fa-lock"></i> ১০০% গোপনীয়
+            </span>
+        </div>
+
+        <div class="category-tags">
+            <span style="font-size: 12px; color: #9ab3a1; align-self: center; margin-right: 4px;">দ্রুত ট্যাগ:</span>
+            <span class="cat-tag" onclick="setCategory('সালাত / নামাজ')">+ সালাত / নামাজ</span>
+            <span class="cat-tag" onclick="setCategory('রোজা ও রমজান')">+ রোজা ও রমজান</span>
+            <span class="cat-tag" onclick="setCategory('জাকাত ও সদকা')">+ জাকাত ও সদকা</span>
+            <span class="cat-tag" onclick="setCategory('বিবাহ ও পারিবারিক')">+ বিবাহ ও পারিবারিক</span>
+            <span class="cat-tag" onclick="setCategory('ব্যবসা ও লেনদেন')">+ ব্যবসা ও লেনদেন</span>
+            <span class="cat-tag" onclick="setCategory('পবিত্রতা ও ওজু')">+ পবিত্রতা ও ওজু</span>
+        </div>
+        
+        <form id="masalaForm">
+            <div class="form-group">
+                <label for="name">আপনার পূর্ণ নাম: *</label>
+                <input type="text" id="name" name="name" class="input-control" placeholder="যেমন: আব্দুল্লাহ আল মামুন" required>
+            </div>
+            <div class="form-group">
+                <label for="email">ইমেইল ঠিকানা: *</label>
+                <input type="email" id="email" name="email" class="input-control" placeholder="উত্তর পাওয়ার জন্য আপনার সঠিক ইমেইল দিন" required>
+            </div>
+            <div class="form-group">
+                <label for="title">মাসআলার বিষয়: *</label>
+                <input type="text" id="title" name="title" class="input-control" placeholder="যেমন: ইবাদত, সেজদায়ে সাহু, ব্যবসায়ে লাভ ইত্যাদি" required>
+            </div>
+            <div class="form-group">
+                <label for="message">প্রশ্ন বিবরণ: *</label>
+                <textarea id="message" name="message" rows="5" class="input-control" placeholder="আপনার প্রশ্নটি স্পষ্ট ও বিস্তারিতভাবে লিখুন (প্রেক্ষাপটসহ)..." required></textarea>
+            </div>
+            
+            <button type="submit" id="submitBtn" class="submit-btn">
+                <div class="plane-container">
+                    <i class="fa-solid fa-paper-plane plane-icon" id="planeIcon"></i>
+                </div>
+                <span id="btnText">শরয়ী প্রশ্ন জমা দিন</span>
+            </button>
+        </form>
+        <div id="status-msg"></div>
+    </div>
+
+    <!-- ডিজিটাল তাসবীহ -->
+    <div class="card">
+        <div class="card-title">
+            <div class="card-title-left">
+                <i class="fa-solid fa-fingerprint"></i>
+                <span>ডিজিটাল তাসবীহ ও জিকির</span>
+            </div>
+            <button onclick="resetTasbih()" class="copy-btn"><i class="fa-solid fa-rotate-left"></i> রিসেট</button>
+        </div>
+
+        <div class="tasbih-box">
+            <div style="font-size: 26px; font-family: 'Amiri', serif; color: #fbf5b7;" id="tasbihArabic">سُبْحَانَ اللَّهِ</div>
+            <div style="font-size: 16px; color: #9ab3a1; margin-top: 4px;" id="tasbihBengali">সুবহানাল্লাহ (লক্ষ্য: ৩৩ বার)</div>
+
+            <button class="tasbih-counter-btn" onclick="countTasbih()">
+                <div id="tasbihCount">০</div>
+                <span>ট্যাপ করে গণনা</span>
+            </button>
+
+            <div style="margin-top: 15px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+                <button class="copy-btn" onclick="selectTasbih('سُبْحَانَ اللَّهِ', 'সুবহানাল্লাহ', 33)">সুবহানাল্লাহ (৩৩)</button>
+                <button class="copy-btn" onclick="selectTasbih('الْحَمْدُ لِلَّهِ', 'আলহামদুলিল্লাহ', 33)">আলহামদুলিল্লাহ (৩৩)</button>
+                <button class="copy-btn" onclick="selectTasbih('اللَّهُ أَكْبَرُ', 'আল্লাহু আকবার', 34)">আল্লাহু আকবার (৩৪)</button>
+                <button class="copy-btn" onclick="selectTasbih('لَا إِلَهَ إِلَّا اللَّهُ', 'লা ইলাহা ইল্লাল্লাহ', 100)">লা ইলাহা ইল্লাল্লাহ (১০০)</button>
+                <button class="copy-btn" onclick="selectTasbih('أَسْتَغْفِرُ اللَّهَ', 'আস্তাগফিরুল্লাহ', 100)">আস্তাগফিরুল্লাহ (১০০)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- জাকাত ক্যালকুলেটর -->
+    <div class="card">
+        <div class="card-title">
+            <div class="card-title-left">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <span>সহজ জাকাত ক্যালকুলেটর (টাকায়)</span>
+            </div>
+            <span style="font-size: 12px; color: #d4af37;">শতকরা ২.৫% হারে হিসাব</span>
+        </div>
+
+        <div class="zakat-grid">
+            <div>
+                <div class="form-group">
+                    <label>মোট নগদ টাকা ও ব্যাংকে জমা:</label>
+                    <input type="number" id="zakatCash" class="input-control" placeholder="৳ ০.০০" oninput="calculateZakat()">
+                </div>
+                <div class="form-group">
+                    <label>স্বর্ণ ও রূপার আনুমানিক মূল্য:</label>
+                    <input type="number" id="zakatGold" class="input-control" placeholder="৳ ০.০০" oninput="calculateZakat()">
+                </div>
+                <div class="form-group">
+                    <label>ব্যবসায়িক পণ্যের পাইকারি মূল্য:</label>
+                    <input type="number" id="zakatStock" class="input-control" placeholder="৳ ০.০০" oninput="calculateZakat()">
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label>মাইনাস: চলতি দেনা বা ঋণ:</label>
+                    <input type="number" id="zakatDebts" class="input-control" placeholder="৳ ০.০০" oninput="calculateZakat()">
+                </div>
+                <div style="background: rgba(0,0,0,0.4); border: 1px solid rgba(212,175,55,0.3); border-radius: 14px; padding: 20px; text-align: center; margin-top: 10px;">
+                    <div style="font-size: 13px; color: #9ab3a1;">প্রদেয় জাকাতের পরিমাণ (২.৫%):</div>
+                    <div style="font-size: 32px; font-weight: 800; color: #fbf5b7; margin-top: 6px;" id="zakatResult">৳ ০</div>
+                    <div style="font-size: 11px; color: #d4af37; margin-top: 4px;">প্রতি ১ লক্ষ টাকায় ২,৫০০ টাকা</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- প্রশ্নোত্তর FAQ -->
+    <div class="card">
+        <div class="card-title">
+            <div class="card-title-left">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>জরুরি শরয়ী মাসআলা ও সমাধান</span>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+            <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 12px; border: 1px solid rgba(212,175,55,0.15);">
+                <strong style="color: #fbf5b7; display: block; margin-bottom: 4px;">১. ওজুর ফরজ কয়টি ও কী কী?</strong>
+                <p style="color: #d7e8dd;">ওজুর ফরজ ৪টি: ১. সম্পূর্ণ মুখমণ্ডল ধোয়া। ২. দুই হাত কনুইসহ ধোয়া। ৩. মাথার চারভাগের একভাগ মাসেহ করা। ৪. দুই পা টাখনুসহ ধোয়া। (সূরা আল-মায়েদা: ৬)</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 12px; border: 1px solid rgba(212,175,55,0.15);">
+                <strong style="color: #fbf5b7; display: block; margin-bottom: 4px;">২. অনিচ্ছাকৃত ভুলবশত কিছু খেলে কি রোজা ভাঙবে?</strong>
+                <p style="color: #d7e8dd;">না, রোজার কথা স্মরণ না থাকার কারণে অনিচ্ছাকৃত ভুলবশত কিছু খেলে রোজা ভাঙবে না। মনে আসার সাথে সাথে খাওয়া বন্ধ করে কুলি করে রোজা পূর্ণ করতে হবে। (সহীহ বুখারী)</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 12px; border: 1px solid rgba(212,175,55,0.15);">
+                <strong style="color: #fbf5b7; display: block; margin-bottom: 4px;">৩. জাকাত ফরজ হওয়ার নিসাব কত?</strong>
+                <p style="color: #d7e8dd;">সাড়ে ৭ তোলা স্বর্ণ অথবা সাড়ে ৫২ তোলা রূপা বা এর সমমূল্যের নগদ অর্থ/ব্যবসার পণ্য প্রয়োজনের অতিরিক্ত পূর্ণ এক বছর থাকলে তার ওপর ২.৫% জাকাত দেওয়া ফরজ।</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 MSS OFFICIAL (মহা সত্যের সন্ধানে) — সর্বস্বত্ব সংরক্ষিত।
+        <div style="margin-top: 8px; font-size: 12px; color: #6d8574;">
+            পবিত্র কুরআন ও সহীহ সুন্নাহর আলোকে বিশুদ্ধ জ্ঞান প্রচারের উদ্দেশ্যে নিবেদিত।
+        </div>
+    </footer>
+</div>
+
+<script>
+    const englishToBangla = {'0':'০','1':'১','2':'২','3':'৩','4':'৪','5':'৫','6':'৬','7':'৭','8':'৮','9':'৯'};
+    function toBanglaNum(str) {
+        return String(str).replace(/[0-9]/g, w => englishToBangla[w]);
+    }
+
+    // ১. লাইভ ঘড়ি ও তারিখ
+    function updateClock() {
+        const now = new Date();
+        const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+        document.getElementById('liveClock').innerText = toBanglaNum(now.toLocaleTimeString('en-US', timeOptions));
+
+        const days = ['রবিবার', 'সোমবার', 'মঙ্গলবার', 'বুধবার', 'বৃহস্পতিবার', 'শুক্রবার', 'শনিবার'];
+        const months = ['জানুয়ারি', 'ফেব্রুয়ারি', 'মার্চ', 'এপ্রিল', 'মে', 'জুন', 'জুলাই', 'আগস্ট', 'সেপ্টেম্বর', 'অক্টোবর', 'নভেম্বর', 'ডিসেম্বর'];
+        const dateStr = `${days[now.getDay()]}, ${toBanglaNum(now.getDate())} ${months[now.getMonth()]} ${toBanglaNum(now.getFullYear())}`;
+        document.getElementById('liveDate').innerText = dateStr;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // ২. নামাজের সময়সূচি (আল-আযান এপিআই, মেথড ১ - করাচি, হানাফি স্কুল ১)
+    let currentTimings = null;
+    function getPrayerTimes() {
+        const city = document.getElementById('districtSelect').value;
+        const url = `https://api.aladhan.com/v1/timingsByCity?city=${city}&country=Bangladesh&method=1&school=1&timezonestring=Asia/Dhaka`;
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                if (data.code === 200) {
+                    currentTimings = data.data.timings;
+                    const hijri = data.data.date.hijri;
+
+                    document.getElementById('fajr').innerText = formatTime(currentTimings.Fajr);
+                    document.getElementById('sunrise').innerText = formatTime(currentTimings.Sunrise);
+                    document.getElementById('dhuhr').innerText = formatTime(currentTimings.Dhuhr);
+                    document.getElementById('asr').innerText = formatTime(currentTimings.Asr);
+                    document.getElementById('maghrib').innerText = formatTime(currentTimings.Maghrib);
+                    document.getElementById('isha').innerText = formatTime(currentTimings.Isha);
+
+                    document.getElementById('sehriEnd').innerText = formatTime(currentTimings.Imsak || currentTimings.Fajr);
+                    document.getElementById('iftarStart').innerText = formatTime(currentTimings.Maghrib);
+
+                    document.getElementById('hijriText').innerText = `${toBanglaNum(hijri.day)} ${hijri.month.ar} (${hijri.month.en}), ${toBanglaNum(hijri.year)} হিজরি`;
+                    calculateNextPrayer();
+                }
+            })
+            .catch(err => {
+                console.error("নামাজের সময়সূচি আনতে সমস্যা:", err);
+            });
+    }
+
+    function formatTime(timeStr) {
+        if (!timeStr) return "--:--";
+        let clean = timeStr.split(' ')[0];
+        let [h, m] = clean.split(':').map(Number);
+        let period = h >= 12 ? 'পিএম' : 'এএম';
+        h = h % 12 || 12;
+        return `${toBanglaNum(h)}:${toBanglaNum(m < 10 ? '0'+m : m)} ${period}`;
+    }
+
+    function calculateNextPrayer() {
+        if (!currentTimings) return;
+        const now = new Date();
+        const list = [
+            { name: 'ফজর', time: currentTimings.Fajr },
+            { name: 'সূর্যোদয়', time: currentTimings.Sunrise },
+            { name: 'যোহর', time: currentTimings.Dhuhr },
+            { name: 'আসর', time: currentTimings.Asr },
+            { name: 'মাগরিব', time: currentTimings.Maghrib },
+            { name: 'এশা', time: currentTimings.Isha }
+        ];
+
+        let next = null;
+        for (let item of list) {
+            let [h, m] = item.time.split(' ')[0].split(':').map(Number);
+            let d = new Date();
+            d.setHours(h, m, 0, 0);
+            if (d > now) {
+                next = { name: item.name, date: d };
+                break;
+            }
+        }
+
+        if (!next) {
+            let [h, m] = currentTimings.Fajr.split(' ')[0].split(':').map(Number);
+            let d = new Date();
+            d.setDate(d.getDate() + 1);
+            d.setHours(h, m, 0, 0);
+            next = { name: 'ফজর (আগামীকাল)', date: d };
+        }
+
+        let diffMs = next.date - now;
+        let diffMins = Math.floor(diffMs / 60000);
+        let hours = Math.floor(diffMins / 60);
+        let mins = diffMins % 60;
+
+        let str = `${next.name} (বাকি `;
+        if (hours > 0) str += `${toBanglaNum(hours)} ঘণ্টা `;
+        str += `${toBanglaNum(mins)} মিনিট)`;
+        document.getElementById('nextPrayerText').innerText = str;
+    }
+    setInterval(calculateNextPrayer, 30000);
+    getPrayerTimes();
+
+    // ৩. ক্যাটাগরি ট্যাগ ক্লিক
+    function setCategory(cat) {
+        const titleInput = document.getElementById('title');
+        titleInput.value = titleInput.value ? `${titleInput.value} - ${cat}` : cat;
+    }
+
+    // ৪. EmailJS দিয়ে ফর্ম জমা ও অ্যানিমেশন
+    document.getElementById('masalaForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const statusMsg = document.getElementById('status-msg');
+
+        submitBtn.classList.add('sending');
+        submitBtn.disabled = true;
+        btnText.innerText = "প্রশ্ন পাঠানো হচ্ছে...";
+        statusMsg.style.display = "none";
+
+        emailjs.sendForm('service_imseggp', 'template_2fdtspa', this)
+            .then(function() {
+                setTimeout(() => {
+                    submitBtn.classList.remove('sending');
+                    submitBtn.disabled = false;
+                    btnText.innerText = "শরয়ী প্রশ্ন জমা দিন";
+                    
+                    statusMsg.style.display = "block";
+                    statusMsg.style.background = "rgba(16, 185, 129, 0.2)";
+                    statusMsg.style.color = "#6ee7b7";
+                    statusMsg.style.border = "1px solid rgba(16, 185, 129, 0.4)";
+                    statusMsg.innerText = "আলহামদুলিল্লাহ! আপনার প্রশ্নটি সফলভাবে জমা হয়েছে। শীঘ্রই ইমেইলে উত্তর জানানো হবে।";
+                    
+                    if (window.confetti) {
+                        confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
+                    }
+                    document.getElementById('masalaForm').reset();
+                }, 1200);
+            }, function(error) {
+                setTimeout(() => {
+                    submitBtn.classList.remove('sending');
+                    submitBtn.disabled = false;
+                    btnText.innerText = "শরয়ী প্রশ্ন জমা দিন";
+                    
+                    statusMsg.style.display = "block";
+                    statusMsg.style.background = "rgba(239, 68, 68, 0.2)";
+                    statusMsg.style.color = "#fca5a5";
+                    statusMsg.style.border = "1px solid rgba(239, 68, 68, 0.4)";
+                    statusMsg.innerText = "দুঃখিত, কোনো সমস্যার কারণে প্রশ্ন পাঠানো যায়নি। পুনরায় চেষ্টা করুন।";
+                    console.error('EmailJS Error:', error);
+                }, 1200);
+            });
+    });
+
+    // ৫. ডিজিটাল তাসবীহ লজিক
+    let tasbihCount = 0;
+    let tasbihTarget = 33;
+
+    function countTasbih() {
+        tasbihCount++;
+        document.getElementById('tasbihCount').innerText = toBanglaNum(tasbihCount);
+        if (tasbihCount >= tasbihTarget) {
+            tasbihCount = 0;
+            if (window.confetti) {
+                confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 } });
+            }
+        }
+    }
+
+    function resetTasbih() {
+        tasbihCount = 0;
+        document.getElementById('tasbihCount').innerText = '০';
+    }
+
+    function selectTasbih(ar, bn, target) {
+        document.getElementById('tasbihArabic').innerText = ar;
+        document.getElementById('tasbihBengali').innerText = `${bn} (লক্ষ্য: ${toBanglaNum(target)} বার)`;
+        tasbihTarget = target;
+        resetTasbih();
+    }
+
+    // ৬. জাকাত হিসাব লজিক
+    function calculateZakat() {
+        const cash = Number(document.getElementById('zakatCash').value) || 0;
+        const gold = Number(document.getElementById('zakatGold').value) || 0;
+        const stock = Number(document.getElementById('zakatStock').value) || 0;
+        const debts = Number(document.getElementById('zakatDebts').value) || 0;
+
+        const totalWealth = Math.max(0, (cash + gold + stock) - debts);
+        const zakat = Math.round(totalWealth * 0.025);
+
+        document.getElementById('zakatResult').innerText = '৳ ' + toBanglaNum(zakat.toLocaleString());
+    }
+
+    // ৭. কপি ফাংশন
+    function copyAyah() {
+        const txt = document.getElementById('ayahBengali').innerText;
+        navigator.clipboard.writeText(txt).then(() => alert("আয়াতটি সফলভাবে কপি হয়েছে!"));
+    }
+    function copyHadith() {
+        const txt = document.getElementById('hadithBengali').innerText;
+        navigator.clipboard.writeText(txt).then(() => alert("হাদিসটি সফলভাবে কপি হয়েছে!"));
+    }
+</script>
+
+</body>
+</html>
